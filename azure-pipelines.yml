@@ -139,7 +139,7 @@ stages:
   dependsOn: 
           - Beta
           - Hotfix 
-  condition: or ( succeeded('Beta'), succeeded('Hotfix'))
+  condition: or ( succeeded('Beta'), succeeded('Hotfix'), and(eq(variables['build.sourceBranch'], 'refs/heads/master'), eq(variables['build.Reason'], 'Manual') ))
   jobs:
    - template: templates/buildplugins.yml   #Build Template
      parameters:
