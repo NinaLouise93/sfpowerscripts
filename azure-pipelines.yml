@@ -132,7 +132,7 @@ stages:
       version: 'beta'
       environmentToDeploy: 'beta'
       toBuild: true
-      organization: dxatscale
+      organization: dxatscalereview
       buildNumber: $(minor)
 
 - stage: Production
